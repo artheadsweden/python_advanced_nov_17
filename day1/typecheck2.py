@@ -44,12 +44,12 @@ def typecheck(func):
     return wrapper
 
 @typecheck
-def tryme(a: int, b: str, c: float) -> int:
+def tryme(a: int, b: str, c: float, d:int = 10) -> int:
     print(a, b, c)
-    return b
+    return a
 
 def main():
-    tryme(1, "hi", 4.5)
+    tryme(1, "hi", 4.5, d="hi")
 
 
 if __name__ == '__main__':
